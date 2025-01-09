@@ -67,6 +67,7 @@ r-cnn-region-cnn
 fast-r-cnn
 fast-er-r-cnn
 yolo
+transformers
 embedding
 math_4-game-theory
 math_5-optimisation
@@ -95,7 +96,7 @@ equations
 x-as-number
 x-as-derivative-differential-and-difference-equations
 choas
-logistic-map
+logistic-map4
 fuzzy-logic
 graphs
 learning-patterns-discovering
@@ -438,9 +439,9 @@ smote
 imbalanced-values
 small-samples-problem
 text-1
-tf-idf
+tf-idf-algorithm
 visual
-wykrywanie-krewedzi
+wykrywanie-krawedzi
 hough
 wykrywanie-elementów
 haar-cascade

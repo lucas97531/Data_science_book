@@ -24,7 +24,7 @@
 <meta name="author" content="Łukasz Muszyński" />
 
 
-<meta name="date" content="2024-11-11" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,6 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.9.1.4.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fast-er-r-cnn"><i class="fa fa-check"></i><b>3.9.1.4.3</b> Fast-er R-CNN</a></li>
 <li class="chapter" data-level="3.9.1.4.4" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#yolo"><i class="fa fa-check"></i><b>3.9.1.4.4</b> Yolo</a></li>
 </ul></li>
+<li class="chapter" data-level="3.9.1.5" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#transformers"><i class="fa fa-check"></i><b>3.9.1.5</b> Transformers:</a></li>
 </ul></li>
 <li class="chapter" data-level="3.9.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#embedding"><i class="fa fa-check"></i><b>3.9.2</b> Embedding</a></li>
 </ul></li>
@@ -277,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.12.6.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#x-as-derivative-differential-and-difference-equations"><i class="fa fa-check"></i><b>3.12.6.2</b> X as derivative: differential and difference equations</a></li>
 <li class="chapter" data-level="3.12.6.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#choas"><i class="fa fa-check"></i><b>3.12.6.3</b> Choas</a>
 <ul>
-<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map</a></li>
+<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map4"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3.12.7" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fuzzy-logic"><i class="fa fa-check"></i><b>3.12.7</b> Fuzzy logic</a></li>
@@ -760,11 +761,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3.2" data-path="data-preprocessing.html"><a href="data-preprocessing.html#text-1"><i class="fa fa-check"></i><b>8.3.2</b> Text</a>
 <ul>
-<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF</a></li>
+<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf-algorithm"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF Algorithm</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3.3" data-path="data-preprocessing.html"><a href="data-preprocessing.html#visual"><i class="fa fa-check"></i><b>8.3.3</b> Visual</a>
 <ul>
-<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krewedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krewedzi</a>
+<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krawedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krawedzi</a>
 <ul>
 <li class="chapter" data-level="8.3.3.1.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#hough"><i class="fa fa-check"></i><b>8.3.3.1.1</b> Hough</a></li>
 </ul></li>
@@ -1066,7 +1067,7 @@ Let us calculate the euclidean distance from the new sample to each training sam
 <p>Wybór funkcji aktywacyjnych do warstwy wyjściowe (output)</p>
 <p><img src="01_AUX/figures/activation_functions_for_output_layers.png" /></p>
 <p><strong>Dropout</strong>:</p>
-<p>Na czym on polega? Wydaje mi się że wyłączenie nauronu to po prostu nałożenie na niego funkcji aktywacyjnej które niezależnie wejścia zwraca zero. Funkcja taka ma zerowy gradient, więc jeżeli robimy wsteczną propagację to nie będziemy modyfikowali wag “wyłączonego” nauronu.</p>
+<p>Na czym on polega? Wydaje mi się że wyłączenie nauronu to po prostu nałożenie na niego funkcji aktywacyjnej które niezależnie od wejścia zwraca zero. Funkcja taka ma zerowy gradient, więc jeżeli robimy wsteczną propagację to nie będziemy modyfikowali wag “wyłączonego” nauronu.</p>
 <p>Dodatkowo należy pamiętać o przeskalowaniu. Jeżeli w danej warstwie wyłączam <em>p</em> procent neuronów to output z pozostałych skaluje przez 1/(1+p).</p>
 </div>
 <div id="rnn" class="section level4" number="3.9.1.3">
@@ -1143,8 +1144,8 @@ Let us calculate the euclidean distance from the new sample to each training sam
 <div id="yolo" class="section level5" number="3.9.1.4.4">
 <h5><span class="header-section-number">3.9.1.4.4</span> Yolo</h5>
 <p>Architektura:</p>
-<p>Przepuszczam obaz przez sieć po czym dostaję predykcję bounding boxów i class elementów w bounding boxach.</p>
-<p>Następnie stosuje algorytm NMS. Ma 2 thresholdy. Jeden usuwa boxy któRe mają małe prawdopodobieństwa wystąpienia obiektu w boxie (niskie pc). Drui odpowiada za IoU. Jeżeli IoU wynosi <em>n</em> to elementy z tej samej klasy dla których bounding boxy pokrywają się w takim stopniu że IoU jest większy nić *n* to usuwamy je (z wyjątkiem tego o największym Pc).</p>
+<p>Przepuszczam obraz przez sieć po czym dostaję predykcję bounding boxów i class elementów w bounding boxach.</p>
+<p>Następnie stosuje algorytm NMS. Ma 2 thresholdy. Jeden usuwa boxy które mają małe prawdopodobieństwa wystąpienia obiektu w boxie (niskie pc). Drugi odpowiada za IoU. Jeżeli IoU wynosi <em>n</em> to elementy z tej samej klasy dla których bounding boxy pokrywają się w takim stopniu że IoU jest większy nić *n* to usuwamy je (z wyjątkiem tego o największym Pc).</p>
 <p>Wady sieci. W jednej komórce może wykryć tylko jeden obiekt danej klasy.</p>
 <p>Trenowanie:</p>
 <p>Przygotowujemy zbiory obrazow dla których mamy podział na grid i dla każdego grida określone elementy wektora:</p>
@@ -1166,13 +1167,20 @@ Let us calculate the euclidean distance from the new sample to each training sam
 <p>h2</p>
 </div>
 </div>
+<div id="transformers" class="section level4" number="3.9.1.5">
+<h4><span class="header-section-number">3.9.1.5</span> Transformers:</h4>
+<p>Transformery nie są rekurencyjne. Zamiast rekurencyjności dodajemy informacje o pozycjach elementów (np. wyrazów w zdaniu).</p>
+<p>Czy transformery są obliczane autoregresyjnie?. Przy inferencji musi tak być (tak, jak przy RNN). Przy trenowaniu, może, ale z przyczyn optymalizacji obliczeń się tego nie stosuje. Żeby sieć nie znała w czasie treningu przyszłosci stosuje się maski.</p>
+<p><a href="https://datascience.stackexchange.com/questions/104179/is-the-transformer-decoder-an-autoregressive-model#:~:text=As%20a%20whole%2C%20the%20Transformer,of%2Dthe%2Dbox%20solutions.">Is the Transformer decoder an autoregressive model?</a></p>
+<p>Sposoby optymalizacji transformerów: <a href="https://lilianweng.github.io/posts/2023-01-10-inference-optimization/">Large Transformer Model Inference Optimization</a></p>
+</div>
 </div>
 <div id="embedding" class="section level3" number="3.9.2">
 <h3><span class="header-section-number">3.9.2</span> Embedding</h3>
 <p>Impelementacja word2vec w pytorch:</p>
 <p><a href="https://gist.github.com/GavinXing/9954ea846072e115bb07d9758892382c" class="uri">https://gist.github.com/GavinXing/9954ea846072e115bb07d9758892382c</a></p>
 <p>Logika dzialania embedding w przypadku pytorch-a dla tekstu (według moich domysłów!) jezeli chcialbym to zaimplementowac zwykla warstwa Linear:</p>
-<p>Dostaje obserwacja postawi calego zdanie. Zdanie to dekomponuje na macierz o wymiarach vxd. v - o slownik (wszystkie mozliwe unikalne wyrazy we wszystkich probkach) a d to ilosc slow. Nastepnie slowo po slowie laduje do sieci i dostaje kolejne wyniki o wymiarach e (e to wymiar embeddingu).</p>
+<p>Dostaje obserwacje na postawie calego zdanie. Zdanie to dekomponuje na macierz o wymiarach vxd. v - to slownik (wszystkie mozliwe unikalne wyrazy we wszystkich probkach) a d to ilosc slow. Nastepnie z mojego zdania, slowo po slowie laduje do sieci i dostaje kolejne wyniki o wymiarach e (e to wymiar embeddingu).</p>
 </div>
 </div>
 <div id="math_4-game-theory" class="section level2" number="3.10">
@@ -1253,8 +1261,8 @@ Let us calculate the euclidean distance from the new sample to each training sam
 </div>
 <div id="choas" class="section level4" number="3.12.6.3">
 <h4><span class="header-section-number">3.12.6.3</span> Choas</h4>
-<div id="logistic-map" class="section level5" number="3.12.6.3.1">
-<h5><span class="header-section-number">3.12.6.3.1</span> logistic map</h5>
+<div id="logistic-map4" class="section level5" number="3.12.6.3.1">
+<h5><span class="header-section-number">3.12.6.3.1</span> logistic map4</h5>
 <p><a href="https://www.youtube.com/watch?v=ovJcsL7vyrk&amp;t=356s">link: varitasium channel</a></p>
 </div>
 </div>

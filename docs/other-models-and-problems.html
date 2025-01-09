@@ -24,7 +24,7 @@
 <meta name="author" content="Łukasz Muszyński" />
 
 
-<meta name="date" content="2024-11-11" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,6 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.9.1.4.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fast-er-r-cnn"><i class="fa fa-check"></i><b>3.9.1.4.3</b> Fast-er R-CNN</a></li>
 <li class="chapter" data-level="3.9.1.4.4" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#yolo"><i class="fa fa-check"></i><b>3.9.1.4.4</b> Yolo</a></li>
 </ul></li>
+<li class="chapter" data-level="3.9.1.5" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#transformers"><i class="fa fa-check"></i><b>3.9.1.5</b> Transformers:</a></li>
 </ul></li>
 <li class="chapter" data-level="3.9.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#embedding"><i class="fa fa-check"></i><b>3.9.2</b> Embedding</a></li>
 </ul></li>
@@ -277,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.12.6.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#x-as-derivative-differential-and-difference-equations"><i class="fa fa-check"></i><b>3.12.6.2</b> X as derivative: differential and difference equations</a></li>
 <li class="chapter" data-level="3.12.6.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#choas"><i class="fa fa-check"></i><b>3.12.6.3</b> Choas</a>
 <ul>
-<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map</a></li>
+<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map4"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3.12.7" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fuzzy-logic"><i class="fa fa-check"></i><b>3.12.7</b> Fuzzy logic</a></li>
@@ -760,11 +761,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3.2" data-path="data-preprocessing.html"><a href="data-preprocessing.html#text-1"><i class="fa fa-check"></i><b>8.3.2</b> Text</a>
 <ul>
-<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF</a></li>
+<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf-algorithm"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF Algorithm</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3.3" data-path="data-preprocessing.html"><a href="data-preprocessing.html#visual"><i class="fa fa-check"></i><b>8.3.3</b> Visual</a>
 <ul>
-<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krewedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krewedzi</a>
+<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krawedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krawedzi</a>
 <ul>
 <li class="chapter" data-level="8.3.3.1.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#hough"><i class="fa fa-check"></i><b>8.3.3.1.1</b> Hough</a></li>
 </ul></li>
@@ -1055,7 +1056,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="icaap" class="section level3" number="9.13.5">
 <h3><span class="header-section-number">9.13.5</span> ICAAP</h3>
-<p>Mamy szereg DR miesiąc po miesiącu. DR jest liczony w okresie LIP. Czyli dla stycznie mamy styczniowe kredyty i badany ile proc. z nich wpadło w default. I tak dalej. Problem jest tutaj taki że w naszym szeregu DR-ów mamy silną korelację. Defaultu z okien czasowych (długości LIP), zazębiają się dla poszczególnych miesięcy. Czyli w przypadku LIP=3miesiące dla DR styczniowe i lutowego nakładają się okresy luty i marze okien czasowych. To można rozwiązać na 3 sposoby:</p>
+<p>Mamy szereg DR (Default Rate) miesiąc po miesiącu. DR jest liczony w okresie LIP (okres od zdarzenia, czyli np. utrata pracy, do defaultu kredytu powodowanego przez to zdzarzenie). Czyli dla stycznia mamy styczniowe kredyty i badamy ile proc. z nich wpadło w default. I tak dalej. Problem jest tutaj taki, że w naszym szeregu DR-ów mamy silną autokorelację. Defaultu z okien czasowych (długości LIP), zazębiają się dla poszczególnych miesięcy. Czyli w przypadku LIP=3miesiące dla DR styczniowe i lutowego nakładają się okresy luty i marze okien czasowych. To można rozwiązać na 3 sposoby:</p>
 <ul>
 <li><p>Zrobić pomiędzy DR-ami takie okresy żeby okna się nie nakładały. Czyli dla LIP = 3miesiące pierwszy DR mamy ze stycznia, a następny dopiero z kwietnia</p></li>
 <li><p>Zastosować specjalne schematy losowanie tak aby zbiory obserwacji dla DR-ów się nie nakładały</p></li>

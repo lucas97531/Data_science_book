@@ -24,7 +24,7 @@
 <meta name="author" content="Łukasz Muszyński" />
 
 
-<meta name="date" content="2024-11-11" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,6 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.9.1.4.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fast-er-r-cnn"><i class="fa fa-check"></i><b>3.9.1.4.3</b> Fast-er R-CNN</a></li>
 <li class="chapter" data-level="3.9.1.4.4" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#yolo"><i class="fa fa-check"></i><b>3.9.1.4.4</b> Yolo</a></li>
 </ul></li>
+<li class="chapter" data-level="3.9.1.5" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#transformers"><i class="fa fa-check"></i><b>3.9.1.5</b> Transformers:</a></li>
 </ul></li>
 <li class="chapter" data-level="3.9.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#embedding"><i class="fa fa-check"></i><b>3.9.2</b> Embedding</a></li>
 </ul></li>
@@ -277,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.12.6.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#x-as-derivative-differential-and-difference-equations"><i class="fa fa-check"></i><b>3.12.6.2</b> X as derivative: differential and difference equations</a></li>
 <li class="chapter" data-level="3.12.6.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#choas"><i class="fa fa-check"></i><b>3.12.6.3</b> Choas</a>
 <ul>
-<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map</a></li>
+<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map4"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3.12.7" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fuzzy-logic"><i class="fa fa-check"></i><b>3.12.7</b> Fuzzy logic</a></li>
@@ -760,11 +761,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3.2" data-path="data-preprocessing.html"><a href="data-preprocessing.html#text-1"><i class="fa fa-check"></i><b>8.3.2</b> Text</a>
 <ul>
-<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF</a></li>
+<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf-algorithm"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF Algorithm</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3.3" data-path="data-preprocessing.html"><a href="data-preprocessing.html#visual"><i class="fa fa-check"></i><b>8.3.3</b> Visual</a>
 <ul>
-<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krewedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krewedzi</a>
+<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krawedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krawedzi</a>
 <ul>
 <li class="chapter" data-level="8.3.3.1.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#hough"><i class="fa fa-check"></i><b>8.3.3.1.1</b> Hough</a></li>
 </ul></li>
@@ -920,7 +921,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Trzeba pamiętać o jednym ważnym rozróżnieniu.</p>
 <ol style="list-style-type: decimal">
 <li>Wartości nietypowe jako różniące się od typowych obserwacji w zbiorze</li>
-<li>Wartości na które jest wrażliwa dana metoda (algorytm) w oparciu o którą budujemy model (nadzorowany lub nienadzorowany). W tym przypadku chyba tylko w przypadku klasycznych modeli ekonometrycznych są dobrze określone miary umożliwiające wykrywanie wartości na które model jest wrażliwy. W pozostałych przypadkach trzeba po prostu przetestować różne sposoby wykrywania outliersów w rozumieniu definicji z punktu 1 i zobaczyć czy dale to wspływ na algorytm.</li>
+<li>Wartości na które jest wrażliwa dana metoda (algorytm) w oparciu o którą budujemy model (nadzorowany lub nienadzorowany). W tym przypadku chyba tylko w przypadku klasycznych modeli ekonometrycznych są dobrze określone miary umożliwiające wykrywanie wartości na które model jest wrażliwy. W pozostałych przypadkach trzeba po prostu przetestować różne sposoby wykrywania outliersów w rozumieniu definicji z punktu 1 i zobaczyć czy daje to wpływ na algorytm.</li>
 </ol>
 <p>Rodzaje algorytmów:</p>
 <p>Porównanie wyników różnych algorytmów:</p>
@@ -933,9 +934,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Ustalam parametr <em>k</em> określający <em>k</em> najbliższych sąsiadów.</p></li>
 <li><p>Wyznaczmy punktu znajdujące się w otoczeniu analizowanego punktu. W tym celu szukam dla analizowanego punktu w jego otoczeniu <em>k</em> najbliższych sąsiadów. Uwaga: jeżeli szukamy <em>k</em> najbliższych sąsiadów możemy finalnie mieć w analizowanym otoczeniu punktu A więcej punktów niż <em>k</em> punktów<em>.</em> Poniższy rysunek pokazuje jak to jest możliwe. Szukamy tutaj 2 najbliższych sąsiadów dla punktu A. Pierwszy najbliższy punkt to C. Następny to np. punkt B. Zatem mamy już dwóch sąsiadów. Jednak okazuje Punkty D leży w takiej samej odległości od A co punkt B. Zatem też go uwzględniamy. Zatem będziemy mieć w analizie sąsiedztwa punktu A, 3 a nie 2 punkty czyli liczbę różną od k.</p>
 <p><img src="06_PREPROCESSING/figures/LOF_1.png" /></p></li>
-<li><p>Obliczamy REACHABILITY DENSITY (RD). Jeżeli odległość punktu od punktu analizowanego jest w promieniu wyznaczonym przez najdalszego sąsiada to RD równa się temu promieniowi. Jeżeli jest poza promieniem to RD jest równe odległości pomiędzy punktami. Popatrzmy na przykład:</p>
+<li><p>Obliczamy REACHABILITY DENSITY (RD) dla każdej pary punktów. UWAGA: ta miara nie jest symetryczna, więc RD z A do B to nie to samo co RD z B do A. Jeżeli odległość punktu od punktu analizowanego jest w promieniu wyznaczonym przez najdalszego sąsiada to RD równa się temu promieniowi. Jeżeli jest poza promieniem to RD jest równe odległości pomiędzy punktami. Popatrzmy na przykład:</p>
 <p><img src="06_PREPROCESSING/figures/LOF_2.png" /></p>
-<p>Powyżej mamy Xj jako punkt dla którego analizujemy otoczenie. Następnie rozpatrujemy 2 możliwe położenia punktu Xi. W pierwszym jest wewnątrz koła wyznaczonego przez najdalszych sąsiadów. Jego RD jest równe niebieskiej linii, czyli promienia okręgu wyznaczonego przez najdalszych sąsiadów. W drugim przypadku jest poza kołem i jego RD jest równe odległości od Xj (pomarańczowa linia).</p></li>
+<p>Mamy dwa punkty Xj i Xi i chcemy policzyć RD z Xj do Xi. Rozpatrujemy 2 możliwe położenia punktu Xi. W pierwszym jest wewnątrz koła wyznaczonego przez k-tych najdalszych sąsiadów. Jego RD jest równe niebieskiej linii, czyli promienia okręgu wyznaczonego przez najdalszych sąsiadów. W drugim przypadku jest poza kołem i jego RD jest równe odległości od Xj (pomarańczowa linia).</p></li>
 <li><p>Następnie obliczmy LOCAL REACHABILITY DENSITY (LRD):</p>
 <p><img src="" /><img src="06_PREPROCESSING/figures/LOF_3.png" /></p>
 <p>Nk(A) to jest zbiór punktów z wyznaczonego otoczenia dla punktu A. W powyższym wzorze || || nie oznacza normy tylko liczebność zbioru. Tak więc ||Nk(A)|| to ilość punktów w wyznaczonym otoczeniu. Miara jest liczona dla każdego puntu (A) przy zadanym k.</p>
@@ -952,12 +953,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="06_PREPROCESSING/figures/LOF_5.png" /></p>
 <p>Following the procedure discussed above:</p>
 <p>Najpierw obliczamy dla każdego punktu odległość od k-tego najdalszego sąsiada. Dla nas k = 2 więc szukamy 2 najbardziej oddalonego sąsiada. Użyjemy odległości <strong>Manhattan:</strong></p>
+<p><img src="06_PREPROCESSING/figures/LOF_6.png" /></p>
+<p>Obliczny dystans dla każdego puntu do k-tych najbliższych sąsiadów:</p>
 <p>K-distance(A) –&gt; since C is the 2ᴺᴰ nearest neighbor of A –&gt; distance(A, C) =2<br />
 K-distance(B) –&gt; since A, C are the 2ᴺᴰ nearest neighbor of B –&gt; distance(B,C) OR distance(B,A) = 1<br />
 K-distance(C) –&gt; since A is the 2ᴺᴰ nearest neighbor of C –&gt; distance(C,A) =2<br />
 K-distance(D) –&gt; since A,C are the 2ᴺᴰ nearest neighbor of D –&gt; distance(D,A) or distance(D,C) =3</p>
-<p>Zatem wszystkie kombinacje odległości to:</p>
-<p><img src="06_PREPROCESSING/figures/LOF_6.png" /></p>
 <p>Poniżej dla każdego punktu jest lista punktów w wyznaczonym otoczeniu oraz ich liczebność.</p>
 <p>K-neighborhood (A) = {B,C} , ||N2(A)|| =2<br />
 K-neighborhood (B) = {A,C}, ||N2(B)|| =2<br />
@@ -1106,7 +1107,7 @@ K-neighborhood (D) = {A,C}, ||N2(D)|| =2</p>
 </div>
 <div id="imbalanced-categories" class="section level4" number="8.3.1.8">
 <h4><span class="header-section-number">8.3.1.8</span> Imbalanced categories</h4>
-<p>Uwaga. W przypadku klasyfikacji <em>imbalanced data</em> i <em>skewed data</em> jest najczęściej używane zamiennie.</p>
+<p>Uwaga. W przypadku klasyfikacji terminy <em>imbalanced data</em> i <em>skewed data</em> są najczęściej używane zamiennie.</p>
 <div id="non-synthetic-methods" class="section level5" number="8.3.1.8.1">
 <h5><span class="header-section-number">8.3.1.8.1</span> Non synthetic methods</h5>
 <div id="under-sampling" class="section level6" number="8.3.1.8.1.1">
@@ -1133,7 +1134,39 @@ K-neighborhood (D) = {A,C}, ||N2(D)|| =2</p>
 <h6><span class="header-section-number">8.3.1.8.2.1</span> SMOTE</h6>
 <p>SMOTE - Synthetic Minority Oversampling Technique.</p>
 <p><strong>Pseudo-algorytm (wersja podstawowa):</strong></p>
-<p>Specifically, a random example from the minority class is first chosen. Then <em>k</em> of the nearest neighbors for that example are found (typically <em>k=5</em>). A randomly selected neighbor is chosen and a synthetic example is created at a randomly selected point between the two examples in feature space.</p>
+<p><strong>1. Identify the Minority Class</strong></p>
+<ul>
+<li>Determine which class in your dataset is underrepresented (the minority class) and which is overrepresented (the majority class).</li>
+</ul>
+<hr />
+<p><strong>2. Select Minority Class Samples</strong></p>
+<ul>
+<li>Randomly choose a sample from the minority class as the base (seed) sample for generating synthetic data.</li>
+</ul>
+<hr />
+<p><strong>3. Find Nearest Neighbors</strong></p>
+<ul>
+<li>Identify the k-nearest neighbors (typically k=5) of the selected sample in the feature space. These are the kkk samples closest to the selected sample, based on a distance metric (e.g., Euclidean distance).</li>
+</ul>
+<hr />
+<p><strong>4. Create Synthetic Samples</strong></p>
+<ul>
+<li><p>For each selected sample <span class="math inline">\(x\)</span>:</p>
+<ul>
+<li><p>Randomly choose one of its nearest neighbors <span class="math inline">\(x_{\text{neighbor}}\)</span>.</p></li>
+<li><p>Create a new synthetic sample <span class="math inline">\(x_{\text{synthetic}}\)</span> by interpolating between <span class="math inline">\(x\)</span> and <span class="math inline">\(x_{\text{neighbor}}\)</span>: <span class="math display">\[
+x_{\text{synthetic}} = x + \delta \cdot (x_{\text{neighbor}} - x)
+\]</span></p>
+<ul>
+<li>Here, <span class="math inline">\(\delta\)</span> is a random number between 0 and 1, ensuring the synthetic sample lies on the line segment between <span class="math inline">\(x\)</span> and <span class="math inline">\(x_{\text{neighbor}}\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<p><strong>5. Repeat Until the Desired Balance is Achieved</strong></p>
+<ul>
+<li>Continue generating synthetic samples until the minority class has enough samples to match or reach a desired proportion of the majority class.</li>
+</ul>
 <p>Zalecane jest aby SMOTE wykonywać w kombinacji w undersamplingiem.</p>
 <br><br>
 <p style="line-height:0;font-size: 9px">
@@ -1152,6 +1185,7 @@ code R
 <ol style="list-style-type: decimal">
 <li><p><strong>Overgeneralization:</strong> SMOTE’s procedure is inherently dangerous since it blindly generalizes the minority area without regard to the majority class. This strategy is particularly problematic in the case of <strong>highly skewed class distributions (</strong>Skewed classes basically refer to a dataset, wherein the number of training example belonging to one class out-numbers heavily the number of training examples beloning to the other. Consider a binary classification, where a cancerous patient is to be detected based on some features<strong>)</strong> since<strong>,</strong> in such cases, the minority class is very sparse with respect to the majority class, thus resulting in a greater chance of class mixture<strong>.</strong></p></li>
 <li><p><strong>Lack of Flexibility</strong>: The number of synthetic samples generated by SMOTE is fixed in advance, thus not allowing for any flexibility in the re-balancing rate.</p></li>
+<li><p><strong>Computational Cost</strong>: Finding kkk-nearest neighbors can be computationally expensive for large datasets.</p></li>
 </ol>
 <p>SMOTE występuje w wariantach z licznymi modyfikacjami. Najczęściej polegają one na tym żeby tworzyć nowe obserwacje w obszarach gdzie są błędy klasyfikacyjne. Przykładem może być SMOTE-Borderline.</p>
 <p><strong>Pseudoalgorym (wersja Borderline):</strong></p>
@@ -1172,18 +1206,71 @@ code R
 </div>
 <div id="text-1" class="section level3" number="8.3.2">
 <h3><span class="header-section-number">8.3.2</span> Text</h3>
-<div id="tf-idf" class="section level4" number="8.3.2.1">
-<h4><span class="header-section-number">8.3.2.1</span> TF-IDF</h4>
-<p>Szczegółowe wprowadzeni teoretyczne z przykładami liczbowymi: <a href="https://towardsdatascience.com/a-gentle-introduction-to-calculating-the-tf-idf-values-9e391f8a13e5">link</a></p>
+<div id="tf-idf-algorithm" class="section level4" number="8.3.2.1">
+<h4><span class="header-section-number">8.3.2.1</span> TF-IDF Algorithm</h4>
+<p><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> is a statistical measure used to evaluate the importance of a word in a document relative to a collection (or corpus) of documents. It combines two key metrics:</p>
+<p>1. Term Frequency (TF)</p>
+<p>Term Frequency measures how frequently a term appears in a document:</p>
+<p><span class="math display">\[
+\text{TF}(t, d) = \frac{\text{Number of times term } t \text{ appears in document } d}{\text{Total number of terms in document } d}
+\]</span></p>
+<hr />
+<p>2. Inverse Document Frequency (IDF)</p>
+<p>Inverse Document Frequency measures how unique or rare a term is across the entire corpus:</p>
+<p><span class="math display">\[
+\text{IDF}(t) = \log \left( \frac{\text{Total number of documents}}{\text{Number of documents containing the term } t} \right)
+\]</span></p>
+<p>If a term appears in many documents, its IDF value will be lower, as it is considered less informative.</p>
+<hr />
+<p>3. TF-IDF Score</p>
+<p>TF-IDF combines the two metrics to assign a weight to each term:</p>
+<p><span class="math display">\[
+\text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
+\]</span></p>
+<hr />
+<p>How It Works</p>
+<ol style="list-style-type: decimal">
+<li><strong>Tokenize the Text</strong>: Split the document and corpus into individual terms (words or tokens).</li>
+<li><strong>Calculate TF for Each Term</strong>: Determine the frequency of each term in a specific document.</li>
+<li><strong>Calculate IDF for Each Term</strong>: Determine how many documents in the corpus contain the term and compute the inverse document frequency.</li>
+<li><strong>Compute TF-IDF</strong>: Multiply the TF and IDF values for each term in the document.</li>
+<li><strong>Rank Terms</strong>: The resulting TF-IDF scores indicate the terms most relevant to the document compared to the corpus.</li>
+</ol>
+<hr />
+<p>Example</p>
+<p>Corpus:</p>
+<ul>
+<li>Document 1: <em>“The cat sat on the mat.”</em></li>
+<li>Document 2: <em>“The dog sat on the mat.”</em></li>
+</ul>
+<p>For the term <strong>cat</strong>:</p>
+<ul>
+<li><p><strong>TF in Document 1:</strong> <span class="math display">\[
+\text{TF} = \frac{1}{6} = 0.167
+\]</span></p></li>
+<li><p><strong>IDF Across Both Documents:</strong> Only Document 1 contains the term “cat,” so: <span class="math display">\[
+\text{IDF} = \log \left( \frac{2}{1} \right) = 0.301
+\]</span></p></li>
+<li><p><strong>TF-IDF for “cat” in Document 1:</strong> <span class="math display">\[
+\text{TF-IDF} = 0.167 \times 0.301 = 0.050
+\]</span></p></li>
+</ul>
+<hr />
+<p>Applications</p>
+<ul>
+<li><strong>Search Engines</strong>: Identifying keywords to improve relevance ranking.</li>
+<li><strong>Text Summarization</strong>: Highlighting important terms in a document.</li>
+<li><strong>Recommendation Systems</strong>: Identifying shared preferences based on textual data.</li>
+</ul>
 </div>
 </div>
 <div id="visual" class="section level3" number="8.3.3">
 <h3><span class="header-section-number">8.3.3</span> Visual</h3>
-<div id="wykrywanie-krewedzi" class="section level4" number="8.3.3.1">
-<h4><span class="header-section-number">8.3.3.1</span> Wykrywanie krewedzi</h4>
+<div id="wykrywanie-krawedzi" class="section level4" number="8.3.3.1">
+<h4><span class="header-section-number">8.3.3.1</span> Wykrywanie krawedzi</h4>
 <div id="hough" class="section level5" number="8.3.3.1.1">
 <h5><span class="header-section-number">8.3.3.1.1</span> Hough</h5>
-<p>pis algoytmu: <a href="https://towardsdatascience.com/lines-detection-with-hough-transform-84020b3b1549">link</a></p>
+<p>opis algoytmu: <a href="https://towardsdatascience.com/lines-detection-with-hough-transform-84020b3b1549">link</a></p>
 </div>
 </div>
 <div id="wykrywanie-elementów" class="section level4" number="8.3.3.2">

@@ -24,7 +24,7 @@
 <meta name="author" content="Łukasz Muszyński" />
 
 
-<meta name="date" content="2024-11-11" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,6 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.9.1.4.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fast-er-r-cnn"><i class="fa fa-check"></i><b>3.9.1.4.3</b> Fast-er R-CNN</a></li>
 <li class="chapter" data-level="3.9.1.4.4" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#yolo"><i class="fa fa-check"></i><b>3.9.1.4.4</b> Yolo</a></li>
 </ul></li>
+<li class="chapter" data-level="3.9.1.5" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#transformers"><i class="fa fa-check"></i><b>3.9.1.5</b> Transformers:</a></li>
 </ul></li>
 <li class="chapter" data-level="3.9.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#embedding"><i class="fa fa-check"></i><b>3.9.2</b> Embedding</a></li>
 </ul></li>
@@ -277,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.12.6.2" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#x-as-derivative-differential-and-difference-equations"><i class="fa fa-check"></i><b>3.12.6.2</b> X as derivative: differential and difference equations</a></li>
 <li class="chapter" data-level="3.12.6.3" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#choas"><i class="fa fa-check"></i><b>3.12.6.3</b> Choas</a>
 <ul>
-<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map</a></li>
+<li class="chapter" data-level="3.12.6.3.1" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#logistic-map4"><i class="fa fa-check"></i><b>3.12.6.3.1</b> logistic map4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3.12.7" data-path="auxiliary-fields.html"><a href="auxiliary-fields.html#fuzzy-logic"><i class="fa fa-check"></i><b>3.12.7</b> Fuzzy logic</a></li>
@@ -760,11 +761,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3.2" data-path="data-preprocessing.html"><a href="data-preprocessing.html#text-1"><i class="fa fa-check"></i><b>8.3.2</b> Text</a>
 <ul>
-<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF</a></li>
+<li class="chapter" data-level="8.3.2.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#tf-idf-algorithm"><i class="fa fa-check"></i><b>8.3.2.1</b> TF-IDF Algorithm</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3.3" data-path="data-preprocessing.html"><a href="data-preprocessing.html#visual"><i class="fa fa-check"></i><b>8.3.3</b> Visual</a>
 <ul>
-<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krewedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krewedzi</a>
+<li class="chapter" data-level="8.3.3.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#wykrywanie-krawedzi"><i class="fa fa-check"></i><b>8.3.3.1</b> Wykrywanie krawedzi</a>
 <ul>
 <li class="chapter" data-level="8.3.3.1.1" data-path="data-preprocessing.html"><a href="data-preprocessing.html#hough"><i class="fa fa-check"></i><b>8.3.3.1.1</b> Hough</a></li>
 </ul></li>
@@ -893,9 +894,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="" /></p>
 <p>Ogólne uwagi:</p>
 <ul>
-<li><p>Nie ma jednej precyzyjnie przyjętej definicji klastra. W ogólności zakłada się że elementy wewnątrz klastra powinny być podobne ze względu na interesujące na kryterium, a obiekty z różnych klastrów powinny się istotnie różnic.</p></li>
-<li><p>Klastrowanie nie jest całkowicie nienadzorowanym procesem. Kiedy dokonujemy klastrowania to musimy wiedzieć jaką informacje mają nam dać klastry. Przykładowo kraje świata możemy poklastrować przy pomocy setek zmiennych. Tylko jaką informację dadzą nam klastry które są zrobione w oparciu o bardzo różne tematycznie nie związane ze sobą zmienne? W klastrowaniu musimy sobie wyznaczyć, że chcemy poklastrować kraje ze względu np. na poziom życia. Albo ze względu na warunki geograficzne. Ten ogólny cel podpowie nam jakie zmienne dobrać i ułatwi nam interpretowalonść klastrów.</p></li>
-<li><p>Warto pamiętaś o przemyśleniu standaryzacji zmiennych i ewentyalnie nadaniu im wag.</p></li>
+<li><p>Nie ma jednej precyzyjnie przyjętej definicji klastra. W ogólności zakłada się że elementy wewnątrz klastra powinny być podobne ze względu na interesujące nas kryterium, a obiekty z różnych klastrów powinny się istotnie różnic.</p></li>
+<li><p>Klastrowanie nie jest całkowicie nienadzorowanym procesem. Kiedy dokonujemy klastrowania to musimy wiedzieć jaką informacje mają nam dać klastry. Przykładowo kraje świata możemy poklastrować przy pomocy setek zmiennych. Tylko jaką informację dadzą nam klastry które są zrobione w oparciu o bardzo różne tematycznie nie związane ze sobą zmienne? W klastrowaniu musimy sobie wyznaczyć, że chcemy poklastrować kraje ze względu np. na poziom życia. Albo ze względu na warunki geograficzne. Ten ogólny cel podpowie nam jakie zmienne dobrać i ułatwi nam interpretowalność klastrów.</p></li>
+<li><p>Warto pamiętać o przemyśleniu standaryzacji zmiennych i ewentualnie nadaniu im wag.</p></li>
 <li><p>Zmienne do modelu powinny też cechować się w miarę dużą wariancją (min.10%)</p></li>
 <li><p>Jest problem ze zmiennymi jakościowymi. Większość algorytmów ich nie obsługuje. Pytanie czy zwykłe przekodowanie na <em>dummies</em> będzie wystarczające.</p></li>
 <li><p>Nie bardzo wiadomo jak podejść do redukcji wymiarowości . Może grozić duża utrata informacji. Tu jest dobry przykład kiedy PCA spowoduje utratę informacji:</p>
@@ -940,7 +941,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>liczebności klastra</p></li>
 <li><p>sumy wartości zmiennych po wszystkich obserwacjach, ale niezależnie po każdym wymiarze.</p></li>
-<li><p>duma kwadratów wartości zmiennych (tutaj chyba jest jedna liczba bo robimy to na raz po wszystkich zmiennych)</p></li>
+<li><p>suma kwadratów wartości zmiennych (tutaj chyba jest jedna liczba bo robimy to na raz po wszystkich zmiennych)</p></li>
 </ul>
 <p>Pseudoalgorytm (mój intuicyjny):</p>
 <ul>
@@ -1301,10 +1302,10 @@ C(x,p) = number of mismatched <strong>categorical attributes</strong> between x 
 <li><p><span class="math inline">\(\epsilon\)</span> określający odległość od punktów jaka będzie analizowana (specifies how close points should be to each other to be considered a part of a cluster. It means that if the distance between two points is lower or equal to this value (eps), these points are considered neighbors).</p></li>
 <li><p><em><strong>minPoints</strong> (</em>the minimum number of points to form a dense region. For example, if we set the minPoints parameter as 5, then we need at least 5 points to form a dense region<em>).</em></p></li>
 </ul></li>
-<li><p>Wybieram JEDEN losowy punkt. Sprawdzam czy w otoczeniu o szerokości <span class="math inline">\(\epsilon\)</span> jest wystarczające ilość innych obserwacji (minPoints). Jeżeli tak to punkt ten traktuje jako <em>core point</em>. Dla mojego <em>core point</em> dla punktów które są w jego otoczeniu sprawdzam warunek bycia <em>core point</em>. I idę tak iteracyjnie aż skończy się możliwość rozszerzania mojej bazy <em>core points</em> . Jeżeli jakiś punkt znajdzie się w otoczeniu jakiegoś <em>core point</em> a sam nie nie jest to jest to punkt brzegowy. Po wyczerpaniu przeszukiwania nasze wszystkie połaczone <em>core points</em> i punkty brzegowe traktujemy jako odwiedzone. Nie będę one bały udziały w dalszej analizie.</p></li>
-<li><p>Teraz losujemy kolejny punkt spośród punktów nieodwiedzonych i potarzamy całą procedurę. Robimy to do wyczerpania wszystkich punktów.</p></li>
+<li><p>Wybieram JEDEN losowy punkt. Sprawdzam czy w otoczeniu o szerokości <span class="math inline">\(\epsilon\)</span> jest wystarczające ilość innych obserwacji (minPoints). Jeżeli tak to punkt ten traktuje jako <em>core point</em>. Dla mojego <em>core point</em> dla punktów które są w jego otoczeniu sprawdzam warunek bycia <em>core point</em>. I idę tak iteracyjnie aż skończy się możliwość rozszerzania mojej bazy <em>core points</em> . Jeżeli jakiś punkt znajdzie się w otoczeniu jakiegoś <em>core point</em> a sam nim nie jest to jest to punkt brzegowy. Po wyczerpaniu przeszukiwania nasze wszystkie połaczone <em>core points</em> i punkty brzegowe traktujemy jako odwiedzone (chyba w ten sposób dostaniemy pierwszy klaster). Nie będę one brały udziału w dalszej analizie.</p></li>
+<li><p>Teraz (szukajac kolejnych klastrów???) losujemy kolejny punkt spośród punktów nieodwiedzonych i potarzamy całą procedurę. Robimy to do wyczerpania wszystkich punktów.</p></li>
 </ol>
-<p>W trakcie analizy niektóre obserwacje nie załapią się ani jako brzegowa ani jako <em>core points</em>. Będą one zaklasyfikowane jako szum. Na rusunku poniżej niebieska obserwacja N to noise (szum), żółte to punkty brzegowe, a czerwone to punkty corowe.</p>
+<p>W trakcie analizy niektóre obserwacje nie załapią się ani jako brzegowa ani jako <em>core points</em>. Będą one zaklasyfikowane jako szum. Na rysunku poniżej niebieska obserwacja N to noise (szum), żółte to punkty brzegowe, a czerwone to punkty corowe.</p>
 <p><img src="02_PATTERNS/figures/DBSCAN.png" /></p>
 <p><strong>Pros:</strong> a) It can handle noise efficiently. b) It can handle clusters of different shapes and sizes. c) It is faster. d) There is no need to define number of clusters in advance. <strong>Cons:</strong> a) Varying densities b) It is not suitable for High-dimensional data c) It has some difficulties in distinguishing separated clusters if they are located too close to</p>
 </div>
